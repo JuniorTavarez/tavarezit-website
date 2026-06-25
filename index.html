@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tavarez IT | Reliable IT Support in Raleigh, NC</title>
+    <style>
+        /* =========================================
+           CSS RESET & BASE STYLES
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Enables smooth scrolling for navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fcfcfc;
+        }
+
+        h1, h2, h3 {
+            color: #1a2a3a;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0056b3;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0056b3;
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        #hero {
+            background: linear-gradient(135deg, #1a2a3a 0%, #0056b3 100%);
+            color: white;
+            padding: 180px 20px 120px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #e0f0ff;
+        }
+
+        .cta-btn {
+            background-color: #ff9900;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #e68a00;
+            color: white;
+        }
+
+        /* =========================================
+           GLOBAL SECTION STYLES (About, Why Us)
+           ========================================= */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+        /* Alternate background color */
+        .bg-light {
+            background-color: #f4f7f6;
+        }
+
+        /* =========================================
+           ABOUT PAGE / SECTION
+           ========================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* =========================================
+           WHY CHOOSE US (Features Grid)
+           ========================================= */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid #0056b3;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* =========================================
+           CONTACT FORM
+           ========================================= */
+        .contact-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #0056b3;
+            color: white;
+            padding: 15px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #004494;
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            background-color: #1a2a3a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .service-areas {
+            font-size: 0.9rem;
+            color: #a0b0c0;
+            margin-top: 15px;
+        }
+
+        /* =========================================
+           MOBILE RESPONSIVENESS
+           ========================================= */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* In a full build, this would be a hamburger menu */
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            #hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Tavarez IT</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Expert IT Infrastructure & Sysadmin Services</h1>
+            <p>Reliable IT, Networking, and Systems Management for Raleigh Businesses.</p>
+            <a href="#contact" class="cta-btn">Get a Free Consultation</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Tavarez IT</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>At Tavarez IT, we bridge the gap between basic desktop support and complex enterprise infrastructure. Founded by a dedicated network engineer and systems administrator, we understand exactly how modern businesses need their technology to function: securely, quietly, and efficiently.</p>
+                    <p>Whether you need to overhaul a chaotic network rack, migrate local domain controllers to the cloud, or secure your endpoints, we bring enterprise-level expertise directly to small and medium businesses in the Triangle area.</p>
+                </div>
+                <div class="about-image">
+                    <div style="background-color: #e0e0e0; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #666;">
+<img src="images/profile.png" alt="Tavarez IT Consultant fixing a server rack" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>No Long-Term Contracts</h3>
+                    <p>We earn your business every single month. No expensive, multi-year lock-ins or hidden fees. Just transparent, high-quality IT service.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Direct Access to an Engineer</h3>
+                    <p>Say goodbye to Tier-1 call centers reading from a script. When you call us, you speak directly to a systems administrator who can fix the problem.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Local On-Site Support</h3>
+                    <p>While we can fix 90% of issues remotely, hardware fails and cables need pulling. We are local to the Triangle and deploy on-site when you need hands-on help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Upgrade Your IT?</h2>
+            <div class="contact-wrapper">
+                
+                <form action="https://formspree.io/f/mgojawkl" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@yourbusiness.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(919) 555-0123">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Describe your IT issues or network needs..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Tavarez IT</h3>
+            <p>&copy; 2026 Tavarez IT. All rights reserved.</p>
+            
+            <p class="service-areas">Proudly serving businesses in: Raleigh | Durham | Cary | Wake Forest | Morrisville | Apex</p>
+        </div>
+    </footer>
+
+    <script>
+        // Optional JavaScript to clear the form after a successful submission 
+        // (Formspree usually redirects, but if you set up Ajax later, this is where it goes).
+        console.log("Tavarez IT site loaded successfully.");
+    </script>
+</body>
+</html>
