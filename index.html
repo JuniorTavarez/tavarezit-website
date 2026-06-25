@@ -61,6 +61,9 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: #0056b3;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Adds space between the icon and the text */
         }
 
         .nav-links {
@@ -267,7 +270,10 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo">Tavarez IT</div>
+            <div class="logo">
+                <img src="images/nav-icon.svg" alt="Tavarez IT Icon" style="height: 40px; width: auto;">
+                Tavarez IT
+            </div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
